@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.putragandad.recycleviewstudy"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.putragandad.recycleviewstudy"
