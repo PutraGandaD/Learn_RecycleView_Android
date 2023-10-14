@@ -12,6 +12,8 @@ import com.putragandad.recycleviewstudy.databinding.RecentvisitItemBinding
 class TPSTerdekatAdapter(private val TPSTerdekatList : ArrayList<TPSTerdekat>)
     : RecyclerView.Adapter<TPSTerdekatAdapter.TpsViewHolder>() {
 
+    var onItemClick : ((TPSTerdekat) -> Unit)? = null
+
     class TpsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageTPS : ImageView = itemView.findViewById(R.id.iv_tps)
         val namaTPS : TextView = itemView.findViewById(R.id.tv_nama_tps)
@@ -37,5 +39,9 @@ class TPSTerdekatAdapter(private val TPSTerdekatList : ArrayList<TPSTerdekat>)
         holder.jarakTPS.text = tps.jarakTPS
         holder.alamatTPS.text = tps.alamatTPS
         holder.jenisTPS.text = tps.jenisTPS
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(tps)
+        }
     }
 }

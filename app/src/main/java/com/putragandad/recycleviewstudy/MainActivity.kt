@@ -1,5 +1,6 @@
 package com.putragandad.recycleviewstudy
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,6 +29,12 @@ class MainActivity : AppCompatActivity() {
 
         tpsAdapter = TPSTerdekatAdapter(tpsList)
         recyclerView.adapter = tpsAdapter
+
+        tpsAdapter.onItemClick = {
+            val intent = Intent(this, DetailTPSActivity::class.java)
+            intent.putExtra("tps", it)
+            startActivity(intent)
+        }
 
     }
 }
