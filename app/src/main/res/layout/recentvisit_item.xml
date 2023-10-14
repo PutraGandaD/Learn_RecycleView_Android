@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    android:backgroundTint="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_tps"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/image_tps3r"/>
+
+        <TextView
+            android:id="@+id/tv_nama_tps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/iv_tps"
+            android:text="TPS 3R Kalidoni"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_jarak_tps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.5 km"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_nama_tps"
+            app:layout_constraintStart_toEndOf="@id/iv_tps"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_alamat_tps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jalan Taqwa Mata Merah\nKecamatan Kalidoni"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/iv_tps"
+            app:layout_constraintTop_toBottomOf="@id/tv_jarak_tps"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TPS 3R"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/iv_tps"
+            app:layout_constraintTop_toBottomOf="@id/tv_alamat_tps"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
