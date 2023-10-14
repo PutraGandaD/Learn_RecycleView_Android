@@ -55,6 +55,7 @@
             android:layout_marginTop="5dp"/>
 
         <TextView
+            android:id="@+id/tv_jenis_tps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TPS 3R"
